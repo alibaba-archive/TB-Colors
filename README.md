@@ -12,7 +12,7 @@ npm i tb-colors --save
 
 #### With Stylus
 ```
-@import 'dist/colors'
+@import 'tb-colors/dist/colors'
 
 .tb-logo
   color: $blue

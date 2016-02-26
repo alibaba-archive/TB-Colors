@@ -1,6 +1,6 @@
 {
   "name": "tb-colors",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A minimalist color palette for use in TB-UI.",
   "main": "index.js",
   "license": "MIT",
