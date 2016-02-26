@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+}
+html,
+body,
+.full-size {
+  width: 100%;
+  height: 100%;
+}
+.tb-logo {
+  font-family: 'Ubuntu';
+  font-weight: 700;
+}
+/* ==== Page: Web ==== */
+.page-web .type-brand {
+  height: 61.8%;
+}
+.page-web .type-brand .tb-logo {
+  display: inline-block;
+  font-size: 140px;
+  vertical-align: middle;
+  position: relative;
+  top: 50%;
+  transform: translateY(-52%);
+}
+.page-web .type-colorful {
+  position: absolute;
+  bottom: 38.2%;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.page-web .type-colorful > * {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+.page-web .type-colorful .name,
+.page-web .type-colorful .hex {
+  display: none;
+}
+.page-web .type-neutral {
+  height: 38.2%;
+  display: flex;
+}
+.page-web .color {
+  position: relative;
+  height: 100%;
+  flex-grow: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: all 218ms;
+}
+.page-web .color .name {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+.page-web .color .hex {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+.page-web .color:hover {
+  opacity: 0.8;
+}
+.page-web .color.gray,
+.page-web .color.grayLight,
+.page-web .color.grayLighter,
+.page-web .color.white,
+.page-web .color.gray > *,
+.page-web .color.grayLight > *,
+.page-web .color.grayLighter > *,
+.page-web .color.white > * {
+  color: #383838 !important;
+}
