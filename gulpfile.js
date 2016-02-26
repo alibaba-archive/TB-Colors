@@ -4,6 +4,7 @@ var stylus     = require('gulp-stylus')
 var rimraf     = require('gulp-rimraf')
 var connect    = require('gulp-connect')
 var sequence   = require('gulp-sequence')
+var ghPages    = require('gulp-gh-pages')
 
 var colors     = require('./src/colors')
 var generators = require('./src/generators')
@@ -65,6 +66,10 @@ gulp.task('serve', ['watch'], function () {
 })
 
 /* ==== Deploy ==== */
+gulp.task('deploy', function() {
+  gulp.src('_gh_pages/**/*')
+    .pipe(ghPages())
+})
 
 /* ==== Task Quences ==== */
 gulp.task('docs', function(callback) {
