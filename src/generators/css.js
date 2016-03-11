@@ -8,7 +8,7 @@ module.exports = function () {
 
   data += "\n/* ==== Colors ==== */\n"
   for (type in colors) {
-    data += "\n// "+ capitalize(type) + "\n"
+    data += "\n/* "+ capitalize(type) + " */\n"
     for (name in colors[type]) {
       var hex = colors[type][name]
       var dashName = camel2Dash(name)
@@ -20,7 +20,7 @@ module.exports = function () {
 
   data += "\n/* ==== Background Colors ==== */\n"
   for (type in colors) {
-    data += "\n// "+ capitalize(type) + "\n"
+    data += "\n/* "+ capitalize(type) + " */\n"
     for (name in colors[type]) {
       var hex = colors[type][name]
       var dashName = camel2Dash(name)

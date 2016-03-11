@@ -2,12 +2,12 @@
 
 /* ==== Colors ==== */
 
-// Brand
+/* Brand */
 .blue {
   color: #03A9F4;
 }
 
-// Colorful
+/* Colorful */
 .purple {
   color: #9C27B0;
 }
@@ -27,7 +27,7 @@
   color: #BBC34A;
 }
 
-// Neutral
+/* Neutral */
 .white {
   color: #FFFFFF;
 }
@@ -52,12 +52,12 @@
 
 /* ==== Background Colors ==== */
 
-// Brand
+/* Brand */
 .bg-blue {
   background-color: #03A9F4;
 }
 
-// Colorful
+/* Colorful */
 .bg-purple {
   background-color: #9C27B0;
 }
@@ -77,7 +77,7 @@
   background-color: #BBC34A;
 }
 
-// Neutral
+/* Neutral */
 .bg-white {
   background-color: #FFFFFF;
 }
