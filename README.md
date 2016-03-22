@@ -16,7 +16,6 @@ npm i tb-colors --save
 
 .tb-logo
   color: $blue
-
 ```
 
 ### Todos
