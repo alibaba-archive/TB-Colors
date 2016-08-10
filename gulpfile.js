@@ -7,6 +7,7 @@ var sequence   = require('gulp-sequence')
 var ghPages    = require('gulp-gh-pages')
 
 var colors     = require('./src/colors')
+var utils      = require('./src/utils')
 var generators = require('./src/generators')
 
 /* ==== Tasks ==== */
@@ -28,7 +29,8 @@ gulp.task('docs-jade', function () {
   gulp.src('src/docs/**/*.jade')
     .pipe(jade({
       locals: {
-        colors: colors
+        colors: colors,
+        utils: utils
       },
       pretty: true
     }))
@@ -47,7 +49,7 @@ gulp.task('docs-style', function () {
 })
 
 gulp.task('docs-script', function () {
-  gulp.src('src/docs/*.js')
+  gulp.src('src/docs/**/*.js')
     .pipe(gulp.dest('_gh_pages/'))
     .pipe(connect.reload())
 })

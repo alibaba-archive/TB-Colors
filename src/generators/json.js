@@ -1,11 +1,13 @@
-colors = require('../colors')
 write  = require('write')
+
+colors = require('../colors')
+utils  = require('../utils')
 
 module.exports = function () {
   var data = {}
   for (type in colors) {
     for (name in colors[type]) {
-      var hex = colors[type][name]
+      var hex = utils.getHex(colors[type][name])
       data[name] = hex
     }
   }

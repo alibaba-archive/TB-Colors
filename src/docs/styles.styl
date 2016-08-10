@@ -51,11 +51,14 @@ inverse()
     margin-bottom: $height * 1.2
     text-align: center
 
+    > *,
+    > *:after
+      border-radius: 50%
+
     > *
       display: inline-block
       width: $height
       height: $height
-      border-radius: 50%
       margin-left: $height
 
     .name,
@@ -71,10 +74,9 @@ inverse()
 
     position: relative
     height: 100%
-    flex-grow: 1
+    flex: 1 0 0
     text-align: center
     cursor: pointer
-    transition: all 218ms
 
     .name
       position: absolute
@@ -86,11 +88,35 @@ inverse()
       bottom: $spacing
       right: $spacing
 
-    &:hover
-      opacity: 0.8
+    .purpose
+      position: relative
+      top: 45%
+      font-size: 70%
+      opacity: 0
+      transition: opacity 218ms
 
-    &.gray,
-    &.grayLight,
-    &.grayLighter,
+    &:after
+      content: ' '
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      visibility: hidden
+      opacity: 0
+      background: #000000
+      transition: opacity 218ms
+
+    &:hover
+      .purpose
+        opacity: .8
+
+      &:after
+        opacity: 0.05
+        visibility: visible
+
+    &.gray90,
+    &.gray93,
+    &.gray97,
     &.white
       inverse()

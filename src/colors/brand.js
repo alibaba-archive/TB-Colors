@@ -1,3 +1,3 @@
 module.exports = {
-  blue: '#03A9F4'
+  blue: '#3DA8F5'
 }

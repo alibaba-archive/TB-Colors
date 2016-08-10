@@ -13,12 +13,16 @@ html(lang="en")
       each type, key in colors
         div(class="type-#{key}")
           each hex, name in type
+            - var purpose = hex.purpose
+            - hex = utils.getHex(hex)
             - var colorfulTitle = (key === 'colorful' ? '$' + name + ' = ' + hex: '')
             div(class="color #{name}", style = {"background-color": hex}, "data-clipboard-text"= hex, title=colorfulTitle)
               if key == 'brand'
                 span.tb-logo t
               span.name $#{name}
               span.hex #{hex}
+              if purpose
+                span.purpose #{purpose}
 
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.8/clipboard.min.js")
-    script(src="../scripts.js")
+    script(src="../scripts/clipboard.min.js")
+    script(src="../scripts/main.js")
