@@ -1,7 +1,9 @@
-colors     = require('../colors')
 write      = require('write')
 capitalize = require('capitalize')
 camel2Dash = require('camel-2-dash')
+
+colors     = require('../colors')
+utils      = require('../utils')
 
 module.exports = function () {
   var data = "// Teambition Color Palette\n"
@@ -10,7 +12,7 @@ module.exports = function () {
   for (type in colors) {
     data += "\n/* "+ capitalize(type) + " */\n"
     for (name in colors[type]) {
-      var hex = colors[type][name]
+      var hex = utils.getHex(colors[type][name])
       var dashName = camel2Dash(name)
       data += "." + dashName + " {\n"
       data += "  color: " + hex + ";\n"
@@ -22,7 +24,7 @@ module.exports = function () {
   for (type in colors) {
     data += "\n/* "+ capitalize(type) + " */\n"
     for (name in colors[type]) {
-      var hex = colors[type][name]
+      var hex = utils.getHex(colors[type][name])
       var dashName = camel2Dash(name)
       data += ".bg-" + dashName + " {\n"
       data += "  background-color: " + hex + ";\n"
